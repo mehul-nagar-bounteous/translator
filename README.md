@@ -11,19 +11,15 @@ A REST API for translating English text into 22 Indian languages using [AI4Bhara
 
 ## Python Version
 
-**Python 3.12** is required. The project was built and tested against Python 3.12.0.
+**Python 3.11, 3.12** is required. The project was built and tested against Python 3.12.0.
 
-Earlier versions (3.10, 3.11) may work but are not tested. Python 3.13+ is not recommended due to limited PyTorch wheel availability.
+Python 3.13+ is not recommended due to limited PyTorch wheel availability.
 
 ## Prerequisites
 
 | Requirement | Notes |
 |---|---|
-| Python 3.12 | [python.org/downloads](https://www.python.org/downloads/) |
-| pip 23+ | Comes with Python 3.12 |
-| CUDA 11.8+ *(optional)* | Required for GPU acceleration |
-| ~5 GB disk space | Model weights are downloaded on first run |
-| ~4 GB RAM (CPU) / ~3 GB VRAM (GPU) | For running inference |
+| Python 3.11 or 3.12|
 
 ## Project Structure
 
@@ -47,12 +43,11 @@ cd translator
 ### 2. Create a virtual environment
 
 ```bash
-python3.12 -m venv venv
+python3.11 -m venv venv
 ```
 
 Activate it:
 
-- **Windows**: `venv\Scripts\activate`
 - **macOS / Linux**: `source venv/bin/activate`
 
 ### 3. Install dependencies
@@ -62,22 +57,6 @@ Activate it:
 ```bash
 pip install -r requirements.txt
 ```
-
-**GPU (CUDA 11.8):**
-
-```bash
-pip install torch --index-url https://download.pytorch.org/whl/cu118
-pip install -r requirements.txt
-```
-
-**GPU (CUDA 12.1):**
-
-```bash
-pip install torch --index-url https://download.pytorch.org/whl/cu121
-pip install -r requirements.txt
-```
-
-> When a CUDA-enabled PyTorch is already installed, the `torch>=2.5.0` line in `requirements.txt` will not downgrade it.
 
 ### 4. Run the server
 
