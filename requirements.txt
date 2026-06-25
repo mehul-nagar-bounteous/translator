@@ -1,8 +1,8 @@
-# Python 3.12 required
+# Python 3.11.15
 fastapi>=0.111.0
 uvicorn[standard]>=0.29.0
 torch>=2.5.0
-transformers>=4.51.0
+transformers==4.51.3
 numpy>=1.26.0
 IndicTransToolkit
 sentencepiece
